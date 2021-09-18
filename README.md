@@ -15,3 +15,33 @@ TimeStamp,Delta_TP9,Delta_AF7,Delta_AF8,Delta_TP10,Theta_TP9,Theta_AF7,Theta_AF8
 15:06.0,0.27492267,0.46229774,0.621691,0.44646338,0.6346841,-0.2122276,-0.001418099,0.3284156,0.85608107,0.456067,0.27066702,0.45449367,0.8406303,0.5690032,0.47438997,0.488851,0.36848024,0.27840284,0.34414506,0.08125826,796.1905,808.2784,785.7143,804.65204,884.83514,-0.404663086,0.106628418,0.933410645,2.093505859,-4.725341797,-1.525268555,1,1,1,1,1,60
 
 ```
+
+### usage
+
+`python main.py or main.exe`
+
+*other params*
+```
+'-i','--input_file', default = "muse_data.csv",
+                      help='input csv file path'
+
+'-c','--channels', dest = 'channels', default = "all_TP10",
+                      help='comma separated channel names'
+example: python main.py -c Alpha_TP10,Beta_TP10 
+         or,    main.exe -c Alpha_TP10,Beta_TP10
+
+
+Note: don't add any space between commas
+
+'-s','--scaling_factor', dest = 'scaling_factor', default = 0.6,
+                      help='scaling factor for signal comparing with mean'
+
+'-d','--div_factor', dest = 'div_factor', default = 1.21,
+                      help='div factor for signal comparing with mean'
+
+'-e','--epoch', dest = 'epoch', default = 420,
+                      help='number of samples to use for epoch'
+
+'-v','--visualize', dest = 'visualize', default = "no",
+                      help='Visualize the plots or save them'                      
+```
